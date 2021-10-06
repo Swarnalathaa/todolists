@@ -1,0 +1,20 @@
+
+.footer{
+    min-height: 10vh;
+}
+.header-container {
+    height: 50px;
+    transition: all 0.30s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 103;
+}
+.content-container {
+    min-height: calc(100vh - 88px);
+    overflow: auto;
+    padding-top: 100px;
+    transition: all 0.30s ease-in-out;
+}
+  
