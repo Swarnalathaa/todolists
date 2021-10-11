@@ -18,23 +18,25 @@
                               </nav>
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="email" class="text-secondary">Email</label>
-                                    <input type="text" class="form-control">
+                            <form (ngSubmit)="register()">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="email" class="text-secondary">Email</label>
+                                        <input type="text" class="form-control" [(ngModel)]="email" name="email">
+                                    </div>
+                                    <div class="col-md-12 pt-3">
+                                        <label for="username" class="text-secondary">Username</label>
+                                        <input type="text" class="form-control" [(ngModel)]="username" name="username">
+                                    </div>
+                                    <div class="col-md-12 pt-3">
+                                        <label for="password" class="text-secondary">Password</label>
+                                        <input type="password" class="form-control" [(ngModel)]="password" name="password">
+                                    </div>
+                                    <div class="col-md-12 pt-3 text-center">
+                                        <button class="btn btn-primary">Register</button>
+                                    </div>
                                 </div>
-                                <div class="col-md-12 pt-3">
-                                    <label for="username" class="text-secondary">Username</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-12 pt-3">
-                                    <label for="password" class="text-secondary">Password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="col-md-12 pt-3 text-center">
-                                    <button class="btn btn-primary">Register</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

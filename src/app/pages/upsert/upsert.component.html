@@ -1,1 +1,16 @@
-<p>upsert works!</p>
+<!-- <p>upsert works!</p> -->
+<div class="modal-content">
+    <div class="modal-header">
+        <h6 class="text-primary"> Add Todo </h6>
+    </div>
+    <div class="modal-body">
+        <label for="name" class="text-secondary">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="title" name="title">
+        <label for="name" class="text-secondary">Content</label>
+        <input type="text" class="form-control" [(ngModel)]="content" name="content">
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-style border-0 text-uppercase loginBtn" (click) = "add()">Add</button>
+        <button type="button" class="btn btn-outline-warning text-warning text-uppercase loginBtn" (click) = "close()">Cancel</button>
+    </div>
+</div>

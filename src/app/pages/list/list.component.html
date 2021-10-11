@@ -2,18 +2,15 @@
 <div class="row">
     <div class="col-md-10 mx-auto my-auto">
         <h5 class="text-bold">ToDo List</h5>
+        <div class="row py-3">
+            <div class="col-md-12 text-end">
+                <button class="btn btn-primary" (click)="openTask()">Add Task</button>
+            </div>
+        </div>
         <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Cras justo odio
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let todo of todoList">
+                {{todo.title}} - {{todo.content}}
                 <span class="icon-position fa fa-trash text-danger cursor-pointer" (click)="openDelete()"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dapibus ac facilisis in
-                <span class="icon-position fa fa-trash text-danger"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Morbi leo risus
-                <span class="icon-position fa fa-trash text-danger"></span>
             </li>
         </ul>
     </div>

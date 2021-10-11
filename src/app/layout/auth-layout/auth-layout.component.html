@@ -10,22 +10,24 @@
                     <h5 class="text-center">Login</h5>
                     <div class="card w-50 mx-auto my-auto">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="email" class="text-secondary">Username</label>
-                                    <input type="text" class="form-control">
+                            <form (ngSubmit)="login()">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="email" class="text-secondary">Username</label>
+                                        <input type="text" class="form-control" [(ngModel)]="username" name="username">
+                                    </div>
+                                    <div class="col-md-12 pt-3">
+                                        <label for="password" class="text-secondary">Password</label>
+                                        <input type="password" class="form-control" [(ngModel)]="password" name="password">
+                                    </div>
+                                    <div class="col-md-12 pt-3 text-center">
+                                        <button class="btn btn-primary">Login</button>
+                                    </div>
+                                    <div class="col-md-12 pt-3 text-center">
+                                        <a href="/register">Don't have an account? Register</a>
+                                    </div>
                                 </div>
-                                <div class="col-md-12 pt-3">
-                                    <label for="password" class="text-secondary">Password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="col-md-12 pt-3 text-center">
-                                    <button class="btn btn-primary">Login</button>
-                                </div>
-                                <div class="col-md-12 pt-3 text-center">
-                                    <a href="/register">Don't have an account? Register</a>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

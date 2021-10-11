@@ -23,4 +23,19 @@ export class ListService {
     };
     return this.apollo.query<any>(payload);
   }
+  createList(data) {
+    const payload: any = {
+      mutation: gql`
+      mutation {
+        create_todo: createTodo(input: {title:"${data.title}",content: "${data.content}", user: "${data.userName}"}){
+          todo {
+            id,
+            title,
+            content
+          }
+        }
+      }`
+    };
+    return this.apollo.mutate<any>(payload);
+  }
 }
